@@ -86,7 +86,7 @@ def train(config):
             break
 
 
-@hydra.main(config_path="../config", config_name="train_grokk")
+@hydra.main(config_path="../config", config_name="train_grokk_double")
 #Use a double config only
 def main(cfg : DictConfig):
     cfg = OmegaConf.to_container(cfg)
