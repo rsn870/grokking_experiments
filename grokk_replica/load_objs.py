@@ -1,5 +1,5 @@
 import torch
-from datasets import ModSumDataset, ModSubtractDataset, ModDivisonDataset, PermutationGroup
+from datasets import ModSumDataset, ModSubtractDataset, ModDivisonDataset, PermutationGroup,ModSumSubtractDataset,ModSumDivisonDataset,ModSubtractDivisonDataset
 from grokk_model import GrokkModel
 from utils import convert_path
 registry = {}
@@ -34,6 +34,23 @@ def load_mod_subtract_dataset(config, verbose=True):
 @register('permutation_group_dataset')
 def load_mod_subtract_dataset(config, verbose=True):
     return PermutationGroup(config['k'], config['frac_train'])
+
+#------------------------------------- DOUBLE DATASETS --------------------------------------
+
+@register('mod_sum_subtract_dataset')
+def load_mod_sum_subtract_dataset(config, verbose=True):
+    return ModSumSubtractDataset(config['p'], config['frac_train'])
+
+@register('mod_sum_division_dataset')
+def load_mod_sum_division_dataset(config, verbose=True):
+    return ModSumDivisonDataset(config['p'], config['frac_train'])
+
+@register('mod_subtract_division_dataset')
+def load_mod_subtract_division_dataset(config, verbose=True):
+    return ModSubtractDivisonDataset(config['p'], config['frac_train'])
+
+
+#-------------------------------------LOAD MODEL--------------------------------------
 
 @register('grokk_model')
 def load_grokk_model(config, vocab_size, out_size, device, verbose=True):
