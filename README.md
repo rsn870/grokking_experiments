@@ -13,7 +13,7 @@ We test if the observations of the paper stand in a multimodal setting.
 pull and install:
 ```
 git clone https://github.com/rsn870/grokking_experiments.git
-cd grokking/
+cd grokking_experiments/
 pip install -r requirements.txt
 ```
 
