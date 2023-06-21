@@ -1,3 +1,11 @@
+# Experiments with Gtokking
+
+We test if the observations of the paper stand in a multimodal setting. 
+
+
+
+
+--------------------------- DIVIDING LINE -------------------------------------------------------------------------------------- 
 ## GROKKING: GENERALIZATION BEYOND OVERFITTING ON SMALL ALGORITHMIC DATASETS
 ### unofficial re-implementation of [this paper](https://mathai-iclr.github.io/papers/papers/MATHAI_29_paper.pdf) by Power et al.
 ### code written by Charlie Snell
